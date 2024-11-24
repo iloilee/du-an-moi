@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMCSHop</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- icon -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="height: 100000px">
+    <header class="header fixed">
+      <div class="main-content">
+        <div class="bodyheader1">
+          <!-- logo -->
+          <img src="assets/img/logo_bmc2.png" alt="logo" height="60px" />
+          <!-- nav -->
+          <nav class="nav">
+            <ul>
+              <li>
+                <a href="#!">Trang Chủ</a>
+              </li>
+              <li>
+                <a href="#!">Sản phẩm</a>
+              </li>
+              <li>
+                <a href="#!">Tin tức</a>
+              </li>
+              <li>
+                <a href="#!">Liên hệ</a>
+              </li>
+              <li>
+                <a href="#!">Giới thiệu</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- thanh tim kiem -->
+          <div class="timkiem">
+            <input id="1" type="text" placeholder="Tìm sản phẩm..." />
+            <button>
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <!-- icon -->
+          <div class="icon">
+            <ul class="listicon">
+              <li>
+                <button class="btn_icon">
+                  <img
+                    src="assets/img/icontracuu.png"
+                    alt="tra cứu đơn hàng"
+                    height="20px"
+                    width="20px"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="btn_icon">
+                  <img
+                    src="assets/img/iconuser.png"
+                    alt="đăng nhập"
+                    height="20px"
+                    width="20px"
+                  />
+                </button>
+              </li>
+              <li>
+                <button class="btn_icon">
+                  <img
+                    src="assets/img/iconshop.png"
+                    alt="giỏ hàng"
+                    height="20px"
+                    width="20px"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="khunghinhchuyendong">
+        <div class="slideshow">
+          <img
+            src="assets/img/01-huyen-thoai-nguyen-tien-minh-1696592877730288972685.webp"
+            alt="khung anh chuyen dong"
+            class="active"
+          />
+          <img src="assets/img/tl2.jpg" alt="" />
+          <img src="assets/img/tl3.jpg" alt="" />
+          <img
+            src="assets/img/1000z-launch-website-banner_1695177885.webp"
+            alt=""
+          />
+          <img src="assets/img/ac.png" alt="" />
+          <img src="assets/img/ac2.webp" alt="" />
+        </div>
+      </div>
+      <!-- Phần hình ảnh nằm ngang giữa trang -->
+      <div class="khung">
+        <a href="vot_cau_long.html">
+          <div class="hinhanh">
+            <img
+              src="./assets/img/vot-cau-long-la-phu-kien-de-choi-cau-long.jpg"
+              alt="Vợt Cầu Lông"
+            />
+            <div class="chu">Vợt Cầu Lông</div>
+          </div>
+        </a>
+        <a href="giay_cau_long.html">
+          <div class="hinhanh">
+            <img
+              src="./assets/img/z5439128163323_8252497ca3f2b955f735454de9b51ef4_e8a184013a3b40668b53c160cf1d4f6e_master.webp"
+              alt="Giày Cầu Lông"
+            />
+            <div class="chu">Giày Cầu Lông</div>
+          </div>
+        </a>
+        <a href="ao_quan_cau_long.html">
+          <div class="hinhanh">
+            <img
+              src="./assets/img/the-first-xanh-ya.jpg"
+              alt="Áo Quần Cầu Lông"
+            />
+            <div class="chu">Áo Quần Cầu Lông</div>
+          </div>
+        </a>
+        <a href="phu_kien_cau_long.html">
+          <div class="hinhanh">
+            <img
+              src="./assets/img/phu-kien-cau-long.jpg"
+              alt="Phụ Kiện Cầu Lông"
+            />
+            <div class="chu">Phụ Kiện Cầu Lông</div>
+          </div>
+        </a>
+      </div>
+    </main>
+  </body>
+  <script>
+    let i = 0;
+    const images = document.querySelectorAll(".slideshow img"); //mảng
+    const dodaimang = images.length;
+
+    function hienthihinh() {
+      images[i].classList.remove("active"); // xóa active
+      i = (i + 1) % dodaimang; // quay lại hình 1
+      images[i].classList.add("active"); // thêm active
+    }
+
+    setInterval(hienthihinh, 2500);
+  </script>
+</html>
